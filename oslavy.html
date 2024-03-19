@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>OSLAVY</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, height=device-height initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      max-width: 1400px;
+      height: 2000px;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      margin: 0 auto; /* This will center the body horizontally */
+      padding: 0;
+    }
+
+    /*hlavička*/
+
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background-color: #151515;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      box-sizing: border-box;
+      z-index: 100;
+    }
+
+    /*hlavička*/
+
+
+
+
+    /*LOGO*/
+    .logo {
+      height: 30px;
+      margin-left: 15px;
+    }
+    /*LOGO*/
+
+
+
+
+    /*!!!!!!!!!!!!!!!!!!!!!!!!*/
+    .nav {
+      display: flex;
+      list-style-type: none;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .nav-item {
+      position: relative;
+      padding: 15px 20px;
+    }
+
+    .scrollable-content {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      height: 0;
+      overflow-y: scroll;
+      background-color: #0D1117;
+      color: #FFFFFF;
+      padding: 20px;
+      transition: height 0.25s ease-out;
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    .nav-item:hover .scrollable-content {
+      height: 250px;
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .nav a {
+      display: flex;
+      align-items: center;
+      color: #ffffff;
+      text-decoration: none;
+      height: 100%;
+      border-bottom-width: 4px;
+      padding: 15px 20px;
+    }
+
+    .nav a:hover {
+      color: #ecafaf;
+    }
+
+    .sub-nav {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      margin: 0px;
+      list-style-type: none;
+    }
+
+    .sub-nav a {
+      padding: 5px 5px;
+    }
+    /* !!!!!!!!!!!!!!!!!!!!!*/
+
+
+    /* !úúúúúúúúúúúúúúú*/
+    .nav-body {
+      display: flex;
+      color: white;
+      list-style-type: none;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .nav-item-body {
+      position: relative;
+      padding: 11px 20px;
+    }
+
+    .scrollable-content-body {
+      position: absolute;
+      top: 55px;
+      left: 0;
+      width: 100%;
+      height: 0;
+      overflow-y: visible;
+      background-color: #cebbbb;
+      color: #000000;
+      padding: 10px;
+      transition: height 0.25s ease-out;
+      visibility: hidden;
+      opacity: 0;
+      z-index: 2;
+    }
+
+    .nav-item-body:hover .scrollable-content-body {
+      height: 185px;
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .nav-body a {
+      display: flex;
+      align-items: center;
+      color: #2c1616;
+      text-decoration: none;
+      height: 100%;
+      border-bottom-width: 5px;
+      padding: 15px 20px;
+    }
+
+    .nav-body a:hover {
+      color: #6c2020;
+    }
+
+    .sub-nav-body {
+      display: flex;
+      flex-direction: column;
+      padding: 6px;
+      margin: 0px;
+      list-style-type: none;
+    }
+
+    .sub-nav-body a {
+      padding: 5px 5px;
+    }
+
+    /* !úúúúúúúúúúúúúúú*/
+
+
+
+    /*PÄTA*/
+    .footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      background-color: #343434;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 20px;
+      box-sizing: border-box;
+      color: #FFFFFF;
+      z-index: 100;
+    }
+
+    .footer a {
+      color: #FFFFFF;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .footer a:hover {
+      color: #E0E0E0;
+    }
+
+    .footer-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .footer-section:last-child {
+      margin-bottom: 0;
+    }
+    /*PÄTA*/
+
+
+
+    .img-container {
+      padding: 60px 0 100px 0;
+      display: flex;
+      justify-content: center;
+    }
+
+
+    @media (min-width: 900px) {
+      .header {
+        max-width: 1440px;
+      }
+
+      .nav {
+        max-width: 900px;
+      }
+
+      .img-container {
+        padding: 10px 0;
+      }
+
+      .img {
+        width: 900px;
+        height: 500px;
+      }
+    }
+
+    .gallery img {
+      width: 90%;
+      height: 90%;
+      object-fit: cover;
+    }
+    .controls button {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      font-size: 30px;
+      color: #070202;
+      opacity: 0.5;
+    }
+    .controls button:hover {
+      opacity: 1;
+    }
+
+    .active {
+      background-color: #aa0457;
+    }
+
+    p {
+      z-index: 1;
+    }
+
+  </style>
+</head>
+
+
+<body>
+<header class="header">
+  <img class="logo" src="../img/logo1.png" alt="Apple Logo"
+       style="width: 40px !important;
+              height: 50px !important;">
+  <ul class="nav">
+    <li class="nav-item">
+      <a href="../SVADBA/svadba.html">Svadby</a>
+    </li>
+    <li class="nav-item">
+      <a class="active" href="#">Oslavy</a>
+    </li>
+    <li class="nav-item">
+      <a href="../FIREMNÉ%20VEČIERKY/Firemné%20večierky.html">Firemné Večierky</a>
+    </li>
+    <li class="nav-item">
+      <a href="../ROZLÚČKA%20SO%20SLOBODOU/rozlúčka%20so%20slobodou.html">Rozlúčka so slobodou</a>
+    </li>
+    <li class="nav-item">
+      <a href="../STUŽKOVÁ/stužkové.html">Stužkové</a>
+    </li>
+  </ul>
+</header>
+
+<div class="img-container">
+  <img class="img" src="../img/firemné-večierky.jpg" alt="Image description">
+</div>
+<ul class="nav-body">
+  <li class="nav-item-body">
+    <a class="active" href="#">About</a>
+  </li>
+  <li class="nav-item-body" >
+    <a href="#">Products</a>
+    <div class="scrollable-content-body">
+      <ul class="sub-nav-body">
+        <li><a href="#">Výzdoba</a></li>
+        <li><a href="#">Darčeky</a></li>
+        <li><a href="#">Spoločenské šaty</a></li>
+      </ul>
+    </div>
+  </li>
+  <li class="nav-item-body" >
+    <a href="#">Služby</a>
+    <div class="scrollable-content-body">
+      <ul class="sub-nav-body">
+        <li><a href="#">Technické služby</a></li>
+        <li><a href="#">Ketering</a></li>
+        <li><a href="#">Vyzážistika</a></li>
+        <li><a href="#">Moderátorstvo</a></li>
+        <li><a href="#">Fotograf</a></li>
+      </ul>
+    </div>
+  </li>
+  <li class="nav-item-body">
+    <a href="#">Projects</a>
+  </li>
+  <li class="nav-item-body">
+    <a href="#">Cenník</a>
+  </li>
+
+
+</ul>
+
+<h1 class="nav-item-body">ABOUT</h1>
+<p class="nav-item-body"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis eleifend mauris.
+  Ut suscipit nisi sit amet placerat porttitor. Aenean scelerisque est nec augue dictum, in varius risus viverra.
+  Vivamus felis magna, tristique ac lorem nec, rutrum ullamcorper turpis.
+  Praesent rhoncus, ante nec iaculis consectetur, felis risus venenatis quam, sit amet blandit nunc orci sit amet ipsum.
+  Sed facilisis id metus sed porta. Donec ornare pellentesque lectus ac pulvinar. Aliquam erat volutpat.
+  Etiam non turpis sem. Duis eu mi ac nulla laoreet maximus et eu ipsum.
+  Phasellus et semper odio. Nam faucibus quis nibh sed porttitor.
+  Proin arcu nisl, laoreet vitae lacinia ac, commodo vel lacus. Proin eu nisl nec mauris blandit posuere.
+  Integer sollicitudin elementum hendrerit.
+  Vestibulum porttitor, dolor id lobortis hendrerit, leo augue aliquam mi, at luctus nisi ligula aliquet tortor.
+  Proin ac ipsum vel risus finibus interdum a at libero. Quisque tempor libero eu arcu malesuada commodo.
+  Suspendisse potenti. Vestibulum vehicula est justo, ac pulvinar nisi fermentum a. Aliquam erat volutpat.
+  Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+  Fusce facilisis bibendum tellus, eu eleifend nulla semper eu.
+  Nunc lacus purus, sagittis eu lectus quis, iaculis tempus orci.</p>
+
+
+
+
+<img class="logo" src="apple-logo.png" alt="Apple Logo">
+<ul class="nav">
+  <li class="nav-item">
+    <a href="hlavná%20stránka/SVADBA/svadba.html">Svadby</a>
+  </li>
+  <li class="nav-item">
+    <a href="../OSLAVY/Oslavy.html">Oslavy</a>
+  </li>
+  <li class="nav-item">
+    <a href="../FIREMNÉ%20VEČIERKY/Firemné%20večierky.html">Firemné Večierky</a>
+  </li>
+  <li class="nav-item">
+    <a href="../ROZLÚČKA%20SO%20SLOBODOU/rozlúčka%20so%20slobodou.html">Rozlúčka so slobodou</a>
+  </li>
+  <li class="nav-item">
+    <a href="../STUŽKOVÁ/stužkové.html">Stužkové</a>
+  </li>
+</ul>
+</header>
+
+
+
+<h1 class="nav-body-h"
+    style="width: 340px;
+    height: 105px ;
+    padding-top: 60px;
+    padding-bottom: 5px;
+    padding-right: 20px;"
+>Hlavná Stránka</h1>
+
+<p class="nav-item-body"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis eleifend mauris.
+  Ut suscipit nisi sit amet placerat porttitor. Aenean scelerisque est nec augue dictum, in varius risus viverra.
+  Vivamus felis magna, tristique ac lorem nec, rutrum ullamcorper turpis.
+  Praesent rhoncus, ante nec iaculis consectetur, felis risus venenatis quam, sit amet blandit nunc orci sit amet ipsum.
+  Sed facilisis id metus sed porta. Donec ornare pellentesque lectus ac pulvinar. Aliquam erat volutpat.
+  Etiam non turpis sem. Duis eu mi ac nulla laoreet maximus et eu ipsum.
+  Phasellus et semper odio. Nam faucibus quis nibh sed porttitor.
+  Proin arcu nisl, laoreet vitae lacinia ac, commodo vel lacus. Proin eu nisl nec mauris blandit posuere.
+  Integer sollicitudin elementum hendrerit.
+  Vestibulum porttitor, dolor id lobortis hendrerit, leo augue aliquam mi, at luctus nisi ligula aliquet tortor.
+  Proin ac ipsum vel risus finibus interdum a at libero. Quisque tempor libero eu arcu malesuada commodo.
+  Suspendisse potenti. Vestibulum vehicula est justo, ac pulvinar nisi fermentum a. Aliquam erat volutpat.
+  Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+  Fusce facilisis bibendum tellus, eu eleifend nulla semper eu.
+  Nunc lacus purus, sagittis eu lectus quis, iaculis tempus orci.</p>
+<img src="..">
+
+
+<footer class="footer">
+  <div class="footer-section">
+    <a href="#">LoremIpsum@gmail.com</a>
+    <a style="color: pink" href="#"> 0900 000 000</a>
+  </div>
+  <div class="footer-section">
+    <a href="#">Lorem Ipsum</a>
+    <a href="#">Lorem Ipsum</a>
+  </div>
+  <div class="footer-section">
+    <a href="#">Copiright (c)</a>
+  </div>
+</footer>
+</body>
+</html>
