@@ -1,0 +1,24 @@
+{
+    "team": {
+      "members": [
+        {
+          "name": "John",
+          "age": 30,
+          "position": "Developer",
+          "skills": ["JavaScript", "React", "Node.js"]
+        },
+        {
+          "name": "Emma",
+          "age": 28,
+          "position": "Designer",
+          "skills": ["UI/UX Design", "Photoshop", "Illustrator"]
+        },
+        {
+          "name": "Michael",
+          "age": 35,
+          "position": "Project Manager",
+          "skills": ["Agile Methodology", "Team Management", "Communication"]
+        }
+      ]
+    }
+  }

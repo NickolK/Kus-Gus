@@ -1,0 +1,34 @@
+<team>
+  <members>
+    <member>
+      <name>John</name>
+      <age>30</age>
+      <position>Developer</position>
+      <skills>
+        <skill>JavaScript</skill>
+        <skill>React</skill>
+        <skill>Node.js</skill>
+      </skills>
+    </member>
+    <member>
+      <name>Emma</name>
+      <age>28</age>
+      <position>Designer</position>
+      <skills>
+        <skill>UI/UX Design</skill>
+        <skill>Photoshop</skill>
+        <skill>Illustrator</skill>
+      </skills>
+    </member>
+    <member>
+      <name>Michael</name>
+      <age>35</age>
+      <position>Project Manager</position>
+      <skills>
+        <skill>Agile Methodology</skill>
+        <skill>Team Management</skill>
+        <skill>Communication</skill>
+      </skills>
+    </member>
+  </members>
+</team>

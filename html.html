@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Members</title>
+</head>
+<body>
+    <table id="team-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Position</th>
+                <th>Skills</th>
+            </tr>
+        </thead>
+        <tbody id="team-body">
+            <!-- Data will be populated here -->
+        </tbody>
+    </table>
+
+    <script>
+        // AJAX request to load XML data
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                displayTeamMembers(this);
+            }
+        };
+        xhttp.open("GET", "team.xml", true);
+        xhttp.send();
+
+        // Function to display team members from XML
+        function displayTeamMembers(xml) {
+            var xmlDoc = xml.responseXML;
+            var members = xmlDoc.getElementsByTagName("member");
+            var tableBody = document.getElementById("team-body");
+
+            for (var i = 0; i < members.length; i++) {
+                var name = members[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
+                var age = members[i].getElementsByTagName("age")[0].childNodes[0].nodeValue;
+                var position = members[i].getElementsByTagName("position")[0].childNodes[0].nodeValue;
+                var skills = [];
+                var skillNodes = members[i].getElementsByTagName("skill");
+                for (var j = 0; j < skillNodes.length; j++) {
+                    skills.push(skillNodes[j].childNodes[0].nodeValue);
+                }
+
+                var newRow = tableBody.insertRow();
+                newRow.innerHTML = "<td>" + name + "</td><td>" + age + "</td><td>" + position + "</td><td>" + skills.join(", ") + "</td>";
+            }
+        }
+    </script>
+</body>
+</html>

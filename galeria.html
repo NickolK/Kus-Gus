@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Galéria</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+     
+    </style>
+</head>
+<body>
+    <header class="header">
+        <img class="logo" src="../webovky galeria/galeria/logo1.jpg" alt="Apple Logo"
+             style="width: 40px !important;
+                  height: 50px !important;">
+    
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="active" href="#">Svadby</a>
+            </li>
+    
+            <li class="nav-item">
+                <a href="../OSLAVY/Oslavy.html">Oslavy</a>
+            </li>
+    
+            <li class="nav-item">
+                <a href="../FIREMNÉ%20VEČIERKY/Firemné%20večierky.html">Firemné Večierky</a>
+            </li>
+    
+            <li class="nav-item">
+                <a href="../ROZLÚČKA%20SO%20SLOBODOU/rozlúčka%20so%20slobodou.html">Rozlúčka so slobodou</a>
+            </li>
+    
+            <li class="nav-item">
+                <a href="../STUŽKOVÁ/stužkové.html">Stužkové</a>
+            </li>
+        </ul>
+        
+    </header>
+    
+<ul class="nav-body">
+    <li class="nav-item-body">
+        <a class="active" href="#">About</a>
+    </li>
+
+    <li class="nav-item-body" >
+        <a href="../WEB FINAL/obleky.html">Produkty</a>
+            <ul class="sub-nav-body">
+                
+                
+            </ul>
+        </div>
+    </li>
+
+    <li class="nav-item-body" >
+        <a href="../WEB FINAL/Služby.html">Služby</a>
+            <ul class="sub-nav-body">
+                
+
+            </ul>
+        </div>
+    </li>
+
+    <li class="nav-item-body">
+        <a href="../WEB FINAL/galeria.html">Galéria</a>
+        <ul class="sub-nav-body">
+                
+
+        </ul>
+    </li>
+
+    <li class="nav-item-body">
+        <a href="">Formulár</a>
+        <ul class="sub-nav-body">
+                
+
+        </ul>
+    </li>
+</ul>
+
+<div class="cont">
+    <div class="heading">
+        <h3><span>Galéria</span></h3>
+    </div>
+    <div class="box">
+        <div class="dream">
+            <img src="../web. zadanie/fotografie/galeria/1.jpg.png" onclick="openLightbox(this)">
+            <img src="../web. zadanie/fotografie/galeria/2.jpg.png" onclick="openLightbox(this)">
+            <img src="../web. zadanie/fotografie/galeria/3.jpg.png" onclick="openLightbox(this)">
+            <img src="../web. zadanie/fotografie/galeria/4.jpg.png" onclick="openLightbox(this)">
+            <img src="../web. zadanie/fotografie/galeria/5.jpg.png" onclick="openLightbox(this)">
+        </div>
+
+        <div class="dream">
+            <img src="../web. zadanie/fotografie/galeria/jpg6.png" onclick="openLightbox(this)">
+            <img src="../web. zadanie/fotografie/galeria/jpg7.png" onclick="openLightbox(this)">
+            <img src="../web. zadanie/fotografie/galeria/jpg8.png" onclick="openLightbox(this)">
+            <img src="../web. zadanie/fotografie/galeria/jpg9.png" onclick="openLightbox(this)">
+            <img src="../web. zadanie/fotografie/galeria/jpg10.png" onclick="openLightbox(this)">
+        </div>
+
+        <div class="dream">
+            <img src="../web. zadanie/fotografie/galeria/jpg11.png" onclick="openLightbox(this)">
+            <img src="../web. zadanie/fotografie/galeria/jpg12.png" onclick="openLightbox(this)">
+            <img src="../web. zadanie/fotografie/galeria/jpg13.png" onclick="openLightbox(this)">
+            <img src="../web. zadanie/fotografie/galeria/jpg14.png" onclick="openLightbox(this)">
+            <img src="../web. zadanie/fotografie/galeria/jpg15.png" onclick="openLightbox(this)">
+        </div>
+    </div>
+    
+</div>
+
+<footer class="footer" style="top: 2300px;">
+    <div class="footer-section">
+        <a href="#">Soirée Specialist Heaven@gmail.com</a>
+        <a style="color: pink" href="#"> 0900 000 000</a>
+    </div>
+
+    <div class="footer-section">
+        <a href="#">O nás</a>
+        <a href="#">GDPR</a>
+    </div>
+
+    <div class="footer-section">
+        <a href="#">Soirée Specialist Heaven (c)</a>
+    </div>
+</footer>
+
+<div id="lightbox_a" class="lightbox_a" onclick="closeLightbox()">
+    <span class="close-btn" onclick="closeLightbox()">&times;</span>
+    <img src="" alt="Obrázok">
+</div>
+
+<script>
+    function openLightbox(img) {
+        var lightbox = document.getElementById("lightbox_a");
+        var imgSrc = img.src;
+        var lightboxImg = lightbox.querySelector("img");
+
+        lightboxImg.src = imgSrc;
+        lightbox.style.display = "flex";
+    }
+
+    function closeLightbox() {
+        var lightbox = document.getElementById("lightbox_a");
+        lightbox.style.display = "none";
+    }
+</script>
+
+</body>
+</html>
