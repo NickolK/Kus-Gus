@@ -1,39 +1,50 @@
 <!DOCTYPE html>
 <html lang="sk">
 <head>
-  <title>GALÉRIA</title>
+  <title>KONTAKT</title>
   <link rel="icon" type="image/x-icon" href="Obrázky/logo1.png">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, height=device-height initial-scale=1.0">
   <link rel="stylesheet" href="style.css" />
-
+  
   <style>
-	.gallery {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-gap: 30px;
-      padding: 10px;
+	.container {
+	  max-width: 400px;
+	  margin: 0 auto;
+	  padding: 20px;
+	  border: 1px solid #ccc;
+	  border-radius: 5px;
 	}
-    .img-container {
-      padding: 30px 0 0px 0;
-      display: flex;
-      justify-content: center;
-    }
-	.img-container img {
-      width: 100%;
-      height: auto;
-      transition: transform 0.5s ease;
+
+	label {
+	  display: block;
+	  margin-bottom: 5px;
 	}
-	.img-container:hover img {
-      transform: scale(1.1);
+
+	input[type="text"],
+	input[type="email"],
+	textarea,
+	select {
+	  width: 100%;
+	  padding: 8px;
+	  margin-bottom: 10px;
+	  border: 1px solid #ccc;
+	  border-radius: 4px;
 	}
-    .gallery img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+
+	button {
+	  background-color: #FD384F;
+	  color: white;
+	  padding: 10px 20px;
+	  border: none;
+	  border-radius: 4px;
+	  cursor: pointer;
+	}
+
+	button:hover {
+	  background-color: #FD2E46;
+	}
   </style>
-</head>
 
 <header class="header">
   <img class="logo" src="Obrázky/logo1.png" alt="Apple Logo"
@@ -76,64 +87,44 @@
     </div>
   </li>
   <li class="nav-item-body">
-    <a class="active" href="galeria.html">Galéria</a>
+    <a href="galeria.html">Galéria</a>
   </li>
     <li class="nav-item-body">
-    <a href="kontakt.html">Kontakt</a>
+    <a class="active" href="kontakt.html">Kontakt</a>
   </li>
 </ul>
 </header>
-
+</head>
 <body>
-<center><h1 class="nav-item-body">Fotky</h1>
 
-    <div class="gallery">
-	  <div class="img-container">
-        <img src="Obrázky/limuzina.jpg">
-      </div>
-      <div class="img-container">
-		<img src="Obrázky/kasino.jpg">
-      </div>
-	  <div class="img-container">
-        <img src="Obrázky/klub.jpg">
-      </div>
-	  <div class="img-container">
-        <img src="Obrázky/limuzina2.jpg">
-	  </div>
-	  <div class="img-container">
-        <img src="Obrázky/kasino2.jpg">
-	  </div>
-	  <div class="img-container">
-        <img src="Obrázky/klub2.jpg">
-	  </div>
-	  <div class="img-container">
-        <img src="Obrázky/limuzina3.jpg">
-	  </div>
-	  <div class="img-container">
-        <img src="Obrázky/kasino3.jpg">
-	  </div>
-	  <div class="img-container">
-        <img src="Obrázky/klub3.jpg">
-	  </div>
-	  <div class="img-container">
-        <img src="Obrázky/stripterka.jpg">
-	  </div>
-	  <div class="img-container">
-        <img src="Obrázky/stripter.jpg">
-	  </div>
-	  <div class="img-container">
-        <img src="Obrázky/masaz.jpeg">
-	  </div>
-	  <div class="img-container">
-        <img src="Obrázky/stripterka2.jpg">
-	  </div>
-	  <div class="img-container">
-        <img src="Obrázky/stripter2.jpg">
-	  </div>
-	  <div class="img-container">
-        <img src="Obrázky/masaz2.jpg">
-	  </div>
-    </div>
+<center><h1 class="nav-item-body">Kontaktný formulár</h1></center>
+<div class="container">
+  <form id="contactForm" onsubmit="return validateForm()">
+    <label for="name">Meno:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="surname">Priezvisko:</label>
+    <input type="text" id="surname" name="surname" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="gender">Pohlavie:</label>
+    <select id="gender" name="gender" required>
+      <option value="">Vyberte si</option>
+      <option value="male">Muž</option>
+      <option value="female">Žena</option>
+      <option value="other">Neželám uviesť</option>
+    </select>
+
+    <label for="message">Správa:</label>
+    <textarea id="message" name="message" required></textarea>
+
+    <button type="submit">Odoslať</button>
+  </form>
+</div>
+
+<script src="script.js"></script>
 
 <footer class="footer">
   <div class="footer-section">

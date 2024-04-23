@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <title>ROZLÚČKA SO SLOBODOU</title>
+  <link rel="icon" type="image/x-icon" href="Obrázky/logo1.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, height=device-height initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+	.images {
+	  display: grid;
+	  grid-template-columns: repeat(3, 1fr);
+      grid-gap: 30px;
+
+      justify-content: center;
+	}
+	.image-container {
+      position: relative;
+      width: 100%;
+      margin: 0 0px;
+	}
+	.image-container img {
+      width: 100%;
+      height: 100%;
+      display: flex;
+	}
+	.overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+	}
+	.image-container:hover .overlay {
+      opacity: 1;
+	}
+  </style>
+</head>
+
+<header class="header">
+  <img class="logo" src="Obrázky/logo1.png" alt="Apple Logo"
+       style="width: 40px !important;
+              height: 50px !important;">
+  <ul class="nav">
+    <li class="nav-item">
+      <a href="svadby.html">Svadby</a>
+    </li>
+    <li class="nav-item">
+      <a href="oslavy.html">Oslavy</a>
+    </li>
+    <li class="nav-item">
+      <a href="firemne_vecierky.html">Firemné Večierky</a>
+    </li>
+    <li class="nav-item">
+      <a class="active" href="rozlucky.html">Rozlúčka so slobodou</a>
+    </li>
+    <li class="nav-item">
+      <a href="stuzkove.html">Stužkové</a>
+    </li>
+  </ul>
+</header>
+
+<ul class="nav-body">
+  <li class="nav-item-body">
+    <a class="active" href="rozlucky.html">Domov</a>
+  </li>
+  <li class="nav-item-body" >
+    <a href="anchor">Služby</a>
+    <div class="scrollable-content-body">
+      <ul class="sub-nav-body">
+        <li><a href="limuziny.html">Limuzíny</a></li>
+        <li><a href="kasina.html">Kasína</a></li>
+        <li><a href="kluby.html">Kluby</a></li>
+        <li><a href="stripterky.html">Striptérky</a></li>
+		<li><a href="stripteri.html">Striptéri</a></li>
+        <li><a href="masaze.html">Masáže</a></li>
+      </ul>
+    </div>
+  </li>
+  <li class="nav-item-body">
+    <a href="galeria.html">Galéria</a>
+  </li>
+    <li class="nav-item-body">
+    <a href="kontakt.html">Kontakt</a>
+  </li>
+</ul>
+</header>
+
+<body>
+<center><h1 class="nav-item-body">O nás</h1>
+<p class="nav-item-body">Sme tím profesionálov so zanietením pre organizovanie nezabudnuteľných udalostí. Už roky sa venujeme plánovaniu a realizácii eventov rôzneho typu - od svadieb a stužkových slávností až po firemné večierky, oslavy a rozlúčky so slobodou. Našou prioritou je vytvárať jedinečné zážitky, ktoré presne zodpovedajú predstavám a požiadavkám našich klientov. S láskou k detailom a profesionálnym prístupom sa zaväzujeme, že váš veľký deň bude taký, ako si ho vysnívate. Nechajte starosti s organizáciou na nás a užite si svoje výnimočné momenty naplno!</p></center>
+
+<center><img src="Obrázky/logo.png" alt="Apple Logo"></center>
+
+<br>
+<br>
+<center><a name="anchor"><h1 class="nav-item-body">Rozlúčka so slobodou</h1></a>
+<p class="nav-item-body"> Pripravte sa na nezabudnuteľnú rozlúčku so slobodou! Náš tím sa postará o každý detail, aby táto udalosť bola pre vás a vašich priateľov úplne bezstarostná a plná zábavy. Od originálnych aktivít a tematických dekorácií až po výber vhodného miesta a catering - my sme tu, aby sme zabezpečili, že vaša rozlúčka bude presne taká, akú si predstavujete. Choďte do manželstva so štýlom a zábavou!</p></center>
+<br>
+<br>
+<br>
+    <div class="images">
+	  <div class="image-container">
+        <img src="Obrázky/limuzina3.jpg">
+		<a href="limuziny.html"><div class="overlay">Limuzíny</div></a>
+      </div>
+      <div class="image-container">
+		<img src="Obrázky/kasino.jpg">
+		<a href="kasina.html"><div class="overlay">Kasína</div></a>
+      </div>
+	  <div class="image-container">
+        <img src="Obrázky/klub3.jpg">
+		<a href="kluby.html"><div class="overlay">Kluby</div></a>
+      </div>
+	  <div class="image-container">
+        <img src="Obrázky/stripterka.jpg">
+	    <a href="stripterky.html"><div class="overlay">Striptérky</div></a>
+      </div>
+		<div class="image-container">
+        <img src="Obrázky/stripter2.jpg">
+	    <a href="stripteri.html"><div class="overlay">Striptéri</div></a>
+      </div>
+	  	<div class="image-container">
+        <img src="Obrázky/masaz.jpeg">
+	    <a href="masaze.html"><div class="overlay">Masáže</div></a>
+      </div>
+
+<footer class="footer">
+  <div class="footer-section">
+    <p>info.soireespecialistheaven@gmail.com</p>
+    <p style="color: pink">&nbsp;&nbsp;+421 900 000 000</p>
+  </div>
+  <div class="footer-section">
+    <a href="faq.html">FAQ</a>
+    <a href="gdpr.html">GDPR</a>
+  </div>
+  <div class="footer-section">
+    <p>Soirée Specialist Heaven ©</p>
+  </div>
+
+</body>
+</html>

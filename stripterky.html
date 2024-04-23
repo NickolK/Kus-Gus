@@ -1,37 +1,24 @@
 <!DOCTYPE html>
 <html lang="sk">
 <head>
-  <title>GALÉRIA</title>
+  <title>STRIPTÉRKY</title>
   <link rel="icon" type="image/x-icon" href="Obrázky/logo1.png">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, height=device-height initial-scale=1.0">
   <link rel="stylesheet" href="style.css" />
 
   <style>
-	.gallery {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-gap: 30px;
-      padding: 10px;
+	.stripterka-info {
+	margin: 40px;
+	padding: 40px;
+	background-color: #FF7979;
 	}
-    .img-container {
-      padding: 30px 0 0px 0;
-      display: flex;
-      justify-content: center;
-    }
-	.img-container img {
-      width: 100%;
-      height: auto;
-      transition: transform 0.5s ease;
+	.stripterka-info img {
+	float: left;
+	width: 40%;
+	height: 40%;
+	margin-right: 20px;
 	}
-	.img-container:hover img {
-      transform: scale(1.1);
-	}
-    .gallery img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
   </style>
 </head>
 
@@ -63,7 +50,7 @@
     <a href="rozlucky.html">Domov</a>
   </li>
   <li class="nav-item-body" >
-    <a href="#">Služby</a>
+    <a class="active" href="#">Služby</a>
     <div class="scrollable-content-body">
       <ul class="sub-nav-body">
         <li><a href="limuziny.html">Limuzíny</a></li>
@@ -76,7 +63,7 @@
     </div>
   </li>
   <li class="nav-item-body">
-    <a class="active" href="galeria.html">Galéria</a>
+    <a href="galeria.html">Galéria</a>
   </li>
     <li class="nav-item-body">
     <a href="kontakt.html">Kontakt</a>
@@ -85,55 +72,34 @@
 </header>
 
 <body>
-<center><h1 class="nav-item-body">Fotky</h1>
 
-    <div class="gallery">
-	  <div class="img-container">
-        <img src="Obrázky/limuzina.jpg">
-      </div>
-      <div class="img-container">
-		<img src="Obrázky/kasino.jpg">
-      </div>
-	  <div class="img-container">
-        <img src="Obrázky/klub.jpg">
-      </div>
-	  <div class="img-container">
-        <img src="Obrázky/limuzina2.jpg">
-	  </div>
-	  <div class="img-container">
-        <img src="Obrázky/kasino2.jpg">
-	  </div>
-	  <div class="img-container">
-        <img src="Obrázky/klub2.jpg">
-	  </div>
-	  <div class="img-container">
-        <img src="Obrázky/limuzina3.jpg">
-	  </div>
-	  <div class="img-container">
-        <img src="Obrázky/kasino3.jpg">
-	  </div>
-	  <div class="img-container">
-        <img src="Obrázky/klub3.jpg">
-	  </div>
-	  <div class="img-container">
-        <img src="Obrázky/stripterka.jpg">
-	  </div>
-	  <div class="img-container">
-        <img src="Obrázky/stripter.jpg">
-	  </div>
-	  <div class="img-container">
-        <img src="Obrázky/masaz.jpeg">
-	  </div>
-	  <div class="img-container">
-        <img src="Obrázky/stripterka2.jpg">
-	  </div>
-	  <div class="img-container">
-        <img src="Obrázky/stripter2.jpg">
-	  </div>
-	  <div class="img-container">
-        <img src="Obrázky/masaz2.jpg">
-	  </div>
-    </div>
+<center><h1 class="nav-item-body">Ponuka striptérok</h1></center>
+<div class="stripterka-info">
+	<p><img src="Obrázky/stripterka.jpg">
+	<b>Scarlett</b>
+	<br>Temná kráska s pôvabom, ktorý je rovnako neodolateľný ako nebezpečný. Jej vystúpenie nie je len o nahotě, ale o moci a kontrole nad svojím telom a energiou, čo robí jej striptíz mimoriadne fascinujúcim. Svoje gestá a pohyby ovláda s eleganciou a istotou, čím pohlcuje svojich divákov do svojej temnej vášne.<br>
+	<br><b>Základné vystúpenie:</b>
+	<br>30-minútové vystúpenie: 100 €
+	<br>Každých ďalších 30 minút: +50 €
+	<br><b>VIP vystúpenie:</b>
+	<br>60-minútové vystúpenie: 200 €
+	<br>Každých ďalších 30 minút: +150 €
+	<br>Dvojité vystúpenie s Lunou: 300€
+	<br>Rezervácie a ďalšie služby podľa dohody vyplnením kontaktného <a href="kontakt.html">formulára.</a></p>
+</div>
+<div class="stripterka-info">
+	<p><img src="Obrázky/stripterka2.jpg">
+	<b>Luna</b>
+	<br>Zvodná, tajomná a nesmierne pôsobivá. Jej vystúpenia sú ako pútavá symfónia tanca a vášne, ktorá ožaruje klubovú scénu svojou hypnotickou prítomnosťou. Svojím elegantným pohybom a pôvabom dokáže Luna Luxe pohladiť dušu a vyvolávať zároveň túžbu po dobrodružstve.<br>
+	<br><b>Základné vystúpenie:</b>
+	<br>30-minútové vystúpenie: 200 €
+	<br>Každých ďalších 30 minút: 100 €
+	<br><b>VIP vystúpenie:</b>
+	<br>60-minútové vystúpenie: 400 €
+	<br>Každých ďalších 30 minút: +2000 €
+	<br>Dvojité vystúpenie so Scarlett: 300€
+	<br>Rezervácie a ďalšie služby podľa dohody vyplnením kontaktného <a href="kontakt.html">formulára.</a></p>
+</div>
 
 <footer class="footer">
   <div class="footer-section">
