@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Vizážistika</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./oslavystyle.css">
+    <style>
+        /* Styling for the gallery */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .gallery-item {
+            flex: 0 1 calc(50% - 20px); /* Dynamic column size with margin */
+            margin: 10px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow */
+            transition: transform 0.3s ease; /* Transition effect */
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05); /* Enlarge image on hover */
+        }
+
+        .gallery-item img {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .gallery-item-text {
+            padding: 10px;
+            background-color: #f8f8f8;
+            border-radius: 0 0 10px 10px;
+        }
+
+        .gallery-item h2 {
+            margin-top: 0;
+        }
+
+        .content {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<header class="header">
+    <img class="logo" src="./logo1.png" alt="Apple Logo"
+         style="width: 40px !important;
+              height: 50px !important;">
+    <ul class="nav">
+        <li class="nav-item">
+            <a href="../SVADBA/svadba.html">Svadby</a>
+        </li>
+        <li class="nav-item">
+            <a class="active" href="#">Oslavy</a>
+        </li>
+        <li class="nav-item">
+            <a href="../FIREMNÉ%20VEČIERKY/Firemné%20večierky.html">Firemné Večierky</a>
+        </li>
+        <li class="nav-item">
+            <a href="../ROZLÚČKA%20SO%20SLOBODOU/rozlúčka%20so%20slobodou.html">Rozlúčka so slobodou</a>
+        </li>
+        <li class="nav-item">
+            <a href="../STUŽKOVÁ/stužkové.html">Stužkové</a>
+        </li>
+    </ul>
+</header>
+
+<div class="img-container">
+    <img class="img" src="./makeupartist.png" alt="Image description">
+</div>
+<ul class="nav-body">
+    <li class="nav-item-body">
+        <a class="active" href="#">O nás</a>
+    </li>
+    <li class="nav-item-body" >
+        <a href="#">Produkty</a>
+        <div class="scrollable-content-body">
+            <ul class="sub-nav-body">
+                <li><a href="vyzdoba.html">Výzdoba</a></li>
+                <li><a href="#">Darčeky</a></li>
+            </ul>
+        </div>
+    </li>
+    <li class="nav-item-body" >
+        <a href="#">Služby</a>
+        <div class="scrollable-content-body">
+            <ul class="sub-nav-body">
+                <li><a href="tech.html">Technické služby</a></li>
+                <li><a href="catering.html">Ketering</a></li>
+                <li><a href="makeup.html">Vyzážistika</a></li>
+                <li><a href="#">Moderátorstvo</a></li>
+                <li><a href="#">Fotograf</a></li>
+            </ul>
+        </div>
+    </li>
+    <li class="nav-item-body">
+        <a href="kontakt.html">Kontakt</a>
+    </li>
+    <li class="nav-item-body">
+        <a href="#">Cenník</a>
+    </li>
+</ul>
+
+<div class="content">
+    <br><br>
+    <p>Are you looking for the finishing touch on your new look? Special occasion like a reunion or formal event? Or maybe you have an upcoming wedding?</p>
+    <p>Our professional makeup services can be just the thing you need to complete your transformation.</p>
+    <br><br><br>
+    <!-- Gallery with images and descriptions -->
+    <div class="gallery">
+        <!-- First row -->
+        <div class="gallery-item">
+            <img src="./bridal.png" alt="Bridal Beauty">
+            <div class="gallery-item-text">
+                <h2>Bridal Beauty</h2>
+                <p>Specializing in exceptional Bridal Makeup for brides and bridal parties. Having the perfect makeup on your special day is quite essential. Wearing the right makeup for your wedding can be life-changing. Your photos will last a lifetime and we want you to look & feel amazingly beautiful and to look back at your photos after many years and remain very proud of your look for your special day.</p>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="./redcarpet.png" alt="Makeup for Red Carpet">
+            <div class="gallery-item-text">
+                <h2>Makeup for Red Carpet</h2>
+                <p>It is important to us that you look & feel your absolute best on the red carpet. Makeup for the red carpet is very important. We specialize in talc-free cosmetics which ensure a flawless appearance for cameras. We take pride in providing beautiful makeup application for red carpets around the globe. "YOU" are your brand and it is very important to us that you represent that in the best way possible.</p>
+            </div>
+        </div>
+
+        <!-- Second row -->
+        <div class="gallery-item">
+            <img src="./speaking.png" alt="Speaking Engagement">
+            <div class="gallery-item-text">
+                <h2>Speaking Engagement</h2>
+                <p>Appearance is everything. Having the right makeup for every public appearance plays a major role in the
+                    success of your branding and overall business goals. Special appearances require the right look, the
+                    right makeup application, the right ingredients of the product you wear, and the right knowledge. We are
+                    the experts.</p>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="./photoshoot.png" alt="Makeup for Professional Photo Shoot">
+            <div class="gallery-item-text">
+                <h2>Makeup for Professional Photo Shoot</h2>
+                <p>Booking a Professional Makeup Artist with dynamic experience & great credentials is key to every
+                    successful photo shoot. All of our artists have been properly & effectively trained to work swiftly on
+                    set while professionally executing flawless looks for camera in every area of flawless camera ready
+                    beauty makeup, editorial makeup, bridal shoots, commercial ad campaigns, makeup for headshots,
+                    engagement photos, business marketing material & much more. All of our beauty products are talc-free and
+                    camera ready! Hey, when YOU look amazing, we look amazing.　</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<button class="more-button" onclick="window.location.href='./kontakt.html'">Contact us</button>
+
+<footer class="footer">
+    <div class="footer-section">
+        <a href="#">LoremIpsum@gmail.com</a>
+        <a style="color: pink" href="#"> 0900 000 000</a>
+    </div>
+    <div class="footer-section">
+        <a href="#">Lorem Ipsum</a>
+        <a href="#">Lorem Ipsum</a>
+    </div>
+    <div class="footer-section">
+        <a href="#">Copiright (c)</a>
+    </div>
+</footer>
+</body>
+</html>

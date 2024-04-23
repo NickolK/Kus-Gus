@@ -1,0 +1,49 @@
+/* Sekcia pre technické služby */
+.services-section {
+    padding: 20px;
+    background-color: #f8f8f8;
+    margin-bottom: 40px;
+    text-align: center; /* zarovnanie textu do stredu */
+}
+
+/* Zarovnanie textu v službách */
+.services-section h2 {
+    margin-bottom: 20px;
+}
+
+/* Obrázky v službách */
+.gallery-item {
+    display: flex;
+    align-items: center; /* zarovnanie do stredu */
+    justify-content: center; /* zarovnanie do stredu */
+    margin-bottom: 40px;
+    text-align: left; /* zarovnanie textu v popise na ľavú stranu */
+}
+
+.gallery-item img {
+    width: 250px; /* prispôsobte veľkosť obrázka podľa vašich potrieb */
+    height: auto; /* zachová pomer strán */
+    margin-right: 20px; /* priestor medzi obrázkom a textom */
+}
+
+/* Text v službách */
+.gallery-item-text {
+    text-align: left; /* zarovnanie textu v popise na ľavú stranu */
+}
+/* Kód pre tlačidlo "Zisti viac" */
+.more-button {
+    display: block;
+    margin: 0 auto; /* zarovnanie tlačidla na stred */
+    padding: 20px 30px;
+    font-size: 16px;
+    background-color: black; /* farba pozadia tlačidla */
+    color: white; /* farba textu tlačidla */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* efekt prechodu */
+}
+
+.more-button:hover {
+    background-color: #aa0457; /* farba pozadia tlačidla po najazdení myšou */
+}

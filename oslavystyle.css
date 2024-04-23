@@ -1,0 +1,307 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: 1400px;
+    height: 2000px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0 auto; /* This will center the body horizontally */
+    padding: 0;
+}
+
+/*hlavička*/
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #151515;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    z-index: 100;
+}
+
+/*LOGO*/
+.logo {
+    height: 30px;
+    margin-left: 15px;
+}
+/*LOGO*/
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!*/
+.nav {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-item {
+    position: relative;
+    padding: 15px 20px;
+}
+
+.scrollable-content {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    overflow-y: scroll;
+    background-color: #0D1117;
+    color: #FFFFFF;
+    padding: 20px;
+    transition: height 0.25s ease-out;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.nav-item:hover .scrollable-content {
+    height: 250px;
+    visibility: visible;
+    opacity: 1;
+}
+
+.nav a {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    text-decoration: none;
+    height: 100%;
+    border-bottom-width: 4px;
+    padding: 15px 20px;
+}
+
+.nav a:hover {
+    color: #ecafaf;
+}
+
+.sub-nav {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0px;
+    list-style-type: none;
+}
+
+.sub-nav a {
+    padding: 5px 5px;
+}
+/* !!!!!!!!!!!!!!!!!!!!!*/
+
+/* !úúúúúúúúúúúúúúú*/
+.nav-body {
+    display: flex;
+    color: white;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-item-body {
+    position: relative;
+    padding: 11px 20px;
+    text-align: center; /* Zarovnanie textu na stred */
+}
+
+.scrollable-content-body {
+    position: absolute;
+    top: 55px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    overflow-y: visible;
+    background-color: #cebbbb;
+    color: #000000;
+    padding: 10px;
+    transition: height 0.25s ease-out;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 2;
+}
+
+.nav-item-body:hover .scrollable-content-body {
+    height: 185px;
+    visibility: visible;
+    opacity: 1;
+}
+
+.nav-body a {
+    display: flex;
+    align-items: center;
+    color: #2c1616;
+    text-decoration: none;
+    height: 100%;
+    border-bottom-width: 5px;
+    padding: 15px 20px;
+}
+
+.nav-body a:hover {
+    color: #6c2020;
+}
+
+.sub-nav-body {
+    display: flex;
+    flex-direction: column;
+    padding: 6px;
+    margin: 0px;
+    list-style-type: none;
+}
+
+.sub-nav-body a {
+    padding: 5px 5px;
+}
+
+/* !úúúúúúúúúúúúúúú*/
+
+/*PÄTA*/
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #343434;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    z-index: 100;
+}
+
+.footer a {
+    color: #FFFFFF;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer a:hover {
+    color: #E0E0E0;
+}
+
+.footer-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.footer-section:last-child {
+    margin-bottom: 0;
+}
+/*PÄTA*/
+
+.img-container {
+    padding: 60px 0 100px 0;
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width: 900px) {
+    .header {
+        max-width: 1440px;
+    }
+
+    .nav {
+        max-width: 900px;
+    }
+
+    .img-container {
+        padding: 10px 0;
+    }
+
+    .img {
+        width: 900px;
+        height: 500px;
+    }
+}
+
+.gallery img {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+}
+.controls button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 30px;
+    color: #070202;
+    opacity: 0.5;
+}
+.controls button:hover {
+    opacity: 1;
+}
+
+.active {
+    background-color: #aa0457;
+}
+
+p {
+    z-index: 1;
+}
+
+/* Štýly pre blog a recenzie */
+
+.blog-section, .reviews-section {
+    padding: 20px;
+    background-color: #f8f8f8;
+    margin-bottom: 40px;
+}
+
+.blog-posts, .reviews {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.blog-post, .review {
+    width: calc(50% - 20px);
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.blog-post h3, .review p {
+    margin-bottom: 10px;
+}
+
+.blog-post a {
+    color: #aa0457;
+    text-decoration: none;
+}
+
+.review .author {
+    margin-top: 10px;
+    font-style: italic;
+}
+.more-button {
+    display: block;
+    margin: 0 auto; /* zarovnanie tlačidla na stred */
+    padding: 20px 30px;
+    font-size: 16px;
+    background-color: black; /* farba pozadia tlačidla */
+    color: white; /* farba textu tlačidla */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* efekt prechodu */
+}
+
+.more-button:hover {
+    background-color: #aa0457; /* farba pozadia tlačidla po najazdení myšou */
+}
+
+
+
